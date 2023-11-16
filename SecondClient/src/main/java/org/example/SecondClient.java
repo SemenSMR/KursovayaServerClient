@@ -4,7 +4,7 @@ import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Client {
+public class SecondClient {
     private static final String SERVER_ADDRESS = "localhost";
 
 
@@ -18,7 +18,6 @@ public class Client {
              PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
              BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
              Scanner scanner = new Scanner(System.in)) {
-
             String serverMessage = in.readLine();
             System.out.println(serverMessage);
 

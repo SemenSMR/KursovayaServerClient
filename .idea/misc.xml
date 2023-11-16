@@ -10,6 +10,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/ChatServer/pom.xml" />
+        <option value="$PROJECT_DIR$/Client2/pom.xml" />
       </set>
     </option>
   </component>

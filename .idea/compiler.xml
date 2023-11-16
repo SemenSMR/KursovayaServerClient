@@ -8,10 +8,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Server" />
         <module name="Client" />
+        <module name="SecondClient" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ChatServer" target="17" />
+      <module name="Client2" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
