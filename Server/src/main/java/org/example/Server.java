@@ -20,10 +20,8 @@ public class Server {
         System.out.println("Start server..... ");
         while (true) {
             Socket clientSocket = serverSocket.accept();
-            System.out.println("Connect client");
             PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
             clients.add(out);
-          //  out.println("Hello, welcome to our chat, Whats your name? ");
             Thread clientThread = new Thread(new ClientHandler(clientSocket, out, clients));
             clientThread.start();
         }

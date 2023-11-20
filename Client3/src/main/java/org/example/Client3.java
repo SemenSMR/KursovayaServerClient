@@ -6,7 +6,7 @@ import java.net.Socket;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class Client {
+public class Client3 {
     private static final String SERVER_ADDRESS = "localhost";
     private static BufferedReader inMess;
     private static PrintWriter outMess;

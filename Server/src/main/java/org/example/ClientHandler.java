@@ -25,7 +25,10 @@ public class ClientHandler implements Runnable {
         try {
             out.println("Hello, welcome to our chat. What's your name?");
             String clientName = in.readLine();
-            System.out.println("Server: New client connected - " + clientName);
+            try (PrintWriter log = new PrintWriter(new FileWriter("file.log", true))) {
+                log.println(getCurrentDataTime() + " " + clientName + ": " + "Присоединился к чату");
+            }
+            System.out.println("Server: Подключение нового клиента - " + clientName);
             Server.broadcast(clientName + " has joined the chat.", out, clients);
 
             String message;
@@ -39,7 +42,7 @@ public class ClientHandler implements Runnable {
             }
 
 
-            System.out.println("Server: Client disconnected - " + clientName);
+            System.out.println("Server: Клиент покинул чат - " + clientName);
             Server.broadcast(clientName + " has left the chat.", out, clients);
             clients.remove(out);
 
